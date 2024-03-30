@@ -1,11 +1,9 @@
 
-L
-java:S1066j"/Merge this if statement with the enclosing one.(ρ„Ή¤8ƒυεθ1
+r
+java:S1066p"/Merge this if statement with the enclosing one.(‹υκ‹8Σ£ªιθ1J$595a1693-7904-4c55-bdd1-4cdecbcfd4b3
 _
-java:S16438"Use a StringBuilder instead.(Δλώ8Ίεθ1J$3f1170e6-ae60-4580-bb29-5f96cbb49b7b
+java:S1643<"Use a StringBuilder instead.(Δλώ8Τ£ªιθ1J$0907e61a-9217-46b6-a8d8-94ab3d0c3b87
+°
+java:S4165!"hRemove this useless assignment; "mockedWord" already holds the assigned value along all execution paths.(ι™ν™ωÿÿÿÿ8τ£ªιθ1J$5c8cfef7-d56b-466c-8000-82cb65ec62aa
 l
-java:S2140B")Use "java.util.Random.nextInt()" instead.(ΉΜ€φ8Φεθ1J$ba2483e1-6b43-440f-a489-17e5405c5565
-j
-java:S1125j"'Remove the unnecessary boolean literal.(ρ„Ή¤8Ψεθ1J$fe9d477b-d6d6-49c2-9b24-43a69787ca15
-s
-java:S2201k"+The return value of "replace" must be used.(΅Ηάτϊÿÿÿÿ8Ωεθ1J$b3357d79-4cf6-42c3-aeca-91891593c3ba
+java:S2140F")Use "java.util.Random.nextInt()" instead.(ΉΜ€φ8ώ£ªιθ1J$9c02a036-c725-4d40-a946-c5d7bdbec166

@@ -2,6 +2,7 @@ package application;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Application {
@@ -10,7 +11,7 @@ public class Application {
 
         String word = newWord();
 
-        String mockedWord = mockedWord(word);
+        char[] mockedWord = mockedWord(word);
 
         JOptionPane.showMessageDialog(null, "Você tem 15 chances para descobrir a palavra:");
 
@@ -22,21 +23,22 @@ public class Application {
 
             char character = Character.toUpperCase(JOptionPane.showInputDialog("Digite uma letra: ").charAt(0));
 
-            boolean hasTheCharacter = hasTheCharacter(character, mockedWord);
-
-            if (!hasTheCharacter) {
+            if (!hasTheCharacter(character, word)) {
 
                 tries.add(character);
 
                 JOptionPane.showMessageDialog(null, "A palavra não possui essa letra, tentativas: " + tries);
             } else {
-                addCharacterInThePosition(mockedWord, character);
-                JOptionPane.showMessageDialog(null, "Boa! A palavra possui a letra: " + mockedWord);
 
-                String guess = JOptionPane.showInputDialog("De dar um palpite?").toUpperCase();
+                mockedWord = addCharacterInThePosition(word, mockedWord, character);
+
+                JOptionPane.showMessageDialog(null, "Boa! A palavra possui a letra: " + Arrays.toString(mockedWord));
+
+                String guess = JOptionPane.showInputDialog("De um palpite:").toUpperCase();
 
                 if (guess.equals(word)) {
                     JOptionPane.showMessageDialog(null, "Parabéns você acertou! A palavra era: " + word);
+                    break;
                 } else {
                     JOptionPane.showMessageDialog(null, "Está errado, tente novamente");
                 }
@@ -45,10 +47,12 @@ public class Application {
             n++;
         }
 
-        JOptionPane.showMessageDialog(null, "Acabaram as chances, a palavra era: " + word);
+        if (n == 15) {
+            JOptionPane.showMessageDialog(null, "Acabaram as chances, a palavra era: " + word);
+        }
     }
 
-    private static String mockedWord(String word) {
+    private static char[] mockedWord(String word) {
 
         String mockedWord = "";
 
@@ -56,7 +60,7 @@ public class Application {
             mockedWord += "_";
         }
 
-        return mockedWord;
+        return mockedWord.toCharArray();
     }
 
     private static String newWord() {
@@ -65,7 +69,7 @@ public class Application {
 
         int random = (int) (Math.random() * 10);
 
-        return words[random - 1];
+        return words[random];
     }
 
     private static boolean hasTheCharacter(char character, String word) {
@@ -96,17 +100,21 @@ public class Application {
         return positions;
     }
 
-    private static void addCharacterInThePosition(String mockedWord, char character) {
+    private static char[] addCharacterInThePosition(String word, char[] mockedWord, char character) {
 
-        boolean[] positions = positionOfCharacter(character, mockedWord);
+        boolean[] positions = positionOfCharacter(character, word);
 
-        for (int i = 0; i < mockedWord.length(); i++) {
+        char[] aux = mockedWord;
 
-            if (mockedWord.charAt(i) == '_') {
-                if (positions[i] == true) {
-                    mockedWord.replace(mockedWord.charAt(i), character);
+        for (int i = 0; i < mockedWord.length; i++) {
+
+            if (aux[i] == '_') {
+                if (positions[i]) {
+                    aux[i] = character;
                 }
             }
         }
+
+        return aux;
     }
 }
