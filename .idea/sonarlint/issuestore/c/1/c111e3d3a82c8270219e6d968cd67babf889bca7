@@ -1,9 +1,9 @@
 
 r
-java:S1066p"/Merge this if statement with the enclosing one.(‹υκ‹8Σ£ªιθ1J$595a1693-7904-4c55-bdd1-4cdecbcfd4b3
+java:S1066p"/Merge this if statement with the enclosing one.(‹υκ‹8Ό»€ϊθ1J$7adbe3e1-2684-4a5f-af6a-0baadba1f1be
 _
-java:S1643<"Use a StringBuilder instead.(Δλώ8Τ£ªιθ1J$0907e61a-9217-46b6-a8d8-94ab3d0c3b87
+java:S1643<"Use a StringBuilder instead.(Δλώ8½»€ϊθ1J$fe05dc12-2d3b-4299-aa59-8d8f79d941bd
 °
-java:S4165!"hRemove this useless assignment; "mockedWord" already holds the assigned value along all execution paths.(ι™ν™ωÿÿÿÿ8τ£ªιθ1J$5c8cfef7-d56b-466c-8000-82cb65ec62aa
+java:S4165!"hRemove this useless assignment; "mockedWord" already holds the assigned value along all execution paths.(ι™ν™ωÿÿÿÿ8ΰ»€ϊθ1J$4ffd0091-44c8-4c62-866a-0fe3ad388355
 l
-java:S2140F")Use "java.util.Random.nextInt()" instead.(ΉΜ€φ8ώ£ªιθ1J$9c02a036-c725-4d40-a946-c5d7bdbec166
+java:S2140F")Use "java.util.Random.nextInt()" instead.(ΉΜ€φ8θ»€ϊθ1J$bba607a5-5a7a-40fe-9a14-eae6c6ad8ec6

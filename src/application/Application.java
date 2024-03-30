@@ -19,7 +19,7 @@ public class Application {
 
         int n = 0;
 
-        while (n <= 15) {
+        while (n < 15) {
 
             char character = Character.toUpperCase(JOptionPane.showInputDialog("Digite uma letra: ").charAt(0));
 
